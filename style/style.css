@@ -20,10 +20,10 @@ header img{
     width: 6%;
 }
 header form{
-    background-color: cyan;
     border-radius: 10px;
     margin-left: auto;
     margin-right: 20px;
+    border: 1px solid black;
 }
 
 

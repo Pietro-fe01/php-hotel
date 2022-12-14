@@ -1,7 +1,6 @@
 <?php
     $hotels = [
         [
-            'img' => 'https://www.belvederericcione.com/images/content/990452_55272_2_C_1800_1014_0_458814346/belvedere2-bassa.jpg',
             'name' => 'Hotel Belvedere',
             'description' => 'Hotel Belvedere Descrizione Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis delectus dolores ad rerum incidunt voluptatibus. Hic exercitationem quia dolor quidem, itaque ullam cum corrupti numquam consectetur optio magni aspernatur!',
             'parking' => true,
