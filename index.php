@@ -51,35 +51,40 @@
 </head>
 <body>
     <main class="container">
-        <h1 class="text-center">Hotel:</h1>
-        <ul>
-            <?php for ($i=0; $i < count($hotels); $i++) {?>
-                <li class="mb-2">
-                    <div>
-                        <strong>Nome Hotel: </strong><?php echo $hotels[$i]['name'] ?>  
-                    </div>
-                    <div>
-                        <strong>Descrizione: </strong><?php echo $hotels[$i]['description'] ?>
-                    </div>
-                    <div>
-                        <strong>Parcheggio: </strong>
-                        <?php
-                            if($hotels[$i]['parking']){
-                                echo 'Si';
-                            } else {
-                                echo 'No';
-                            }
-                        ?>
-                    </div>
-                    <div>
-                        <strong>Voto: </strong><?php echo $hotels[$i]['vote'] ?>
-                    </div>
-                    <div>
-                        <strong>Distanza dal centro: </strong><?php echo $hotels[$i]['distance_to_center'] ?> km
-                    </div>
-                </li>
-            <?php } ?>
-        </ul>
+        <h1 class="text-center mb-3">Hotel List:</h1>
+
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Parking</th>
+                    <th scope="col">Vote</th>
+                    <th scope="col">HDistance to center</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php for ($i=0; $i < count($hotels); $i++) { ?>
+                    <tr>
+                        <th scope="row"><?php echo $i + 1 ?></th>
+                        <td><?php echo $hotels[$i]['name'] ?></td>
+                        <td><?php echo $hotels[$i]['description'] ?></td>
+                        <td>
+                            <?php
+                                if($hotels[$i]['parking']){
+                                    echo 'Si';
+                                } else {
+                                    echo 'No';
+                                }
+                            ?>
+                        </td>
+                        <td><?php echo $hotels[$i]['vote'] ?></td>
+                        <td><?php echo $hotels[$i]['distance_to_center'] ?> km</td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
     </main>
     
     <!-- Bootstrap CDN js -->
