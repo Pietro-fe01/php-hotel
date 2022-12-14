@@ -38,7 +38,7 @@
     ];
 
     $parking = isset($_GET['parking_filter']) ? $_GET['parking_filter'] : 'no_filter';
-    $voting = $_GET['vote']
+    $voting = $_GET['vote'];
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +58,7 @@
 </head>
 <body>
     <main class="container">
-        <h1 class="text-center mb-3">Hotel List:</h1>
+        <h1 class="text-center mb-3 pt-3">Hotel List:</h1>
 
         <form action="index.php" method="GET" class="custom-control custom-checkbox px-4 py-3">
             <input type="checkbox" class="custom-control-input" id="customCheck1" name="parking_filter" value="on">

@@ -31,6 +31,6 @@ button i{
 }
 
 button:hover i{
-    background-color: red;
+    background-color: white;
     transform: scale(1.2);
 }
