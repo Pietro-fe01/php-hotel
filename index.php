@@ -79,7 +79,7 @@
     </header>
     <main class="container">
         <div class="cards-container mt-5">
-            <?php for ($i=0; $i < count($hotels); $i++) { ?>
+            <?php foreach ($hotels as $hotel) { ?>
                 <?php if($parking == 'no_filter' && $voting == 'all' 
                 || $parking == 'no_filter' && $voting == 'one' && $hotels[$i]['vote'] >= 1
                 || $parking == 'no_filter' && $voting == 'two' && $hotels[$i]['vote'] >= 2
@@ -96,14 +96,14 @@
                 <div class="card mb-5">
                     <img class="card-img-top" src="https://www.belvederericcione.com/images/content/990452_55272_2_C_1800_1014_0_458814346/belvedere2-bassa.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $hotels[$i]['name'] ?></h5>
-                        <p class="card-text"><?php echo $hotels[$i]['description'] ?></p>
+                        <h5 class="card-title"><?php echo $hotel['name'] ?></h5>
+                        <p class="card-text"><?php echo $hotel['description'] ?></p>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"> 
                             <strong>Parcheggio: </strong>
                             <?php
-                                if($hotels[$i]['parking']){
+                                if($hotel['parking']){
                                     echo 'Si';
                                 } else {
                                     echo 'No';
@@ -112,11 +112,11 @@
                         </li>
                         <li class="list-group-item">
                             <strong>Voto: </strong>
-                            <?php echo $hotels[$i]['vote'] ?>
+                            <?php echo $hotel['vote'] ?>
                         </li>
                         <li class="list-group-item">
                             <strong>Distanza dal centro: </strong>
-                            <?php echo $hotels[$i]['distance_to_center'] ?> km
+                            <?php echo $hotel['distance_to_center'] ?> km
                         </li>
                     </ul>
                 </div>
