@@ -3,14 +3,33 @@ body{
 }
 
 /*----------------------------
-    MAIN 
+    HEADER 
 -----------------------------*/
-main {
+header{
+    background-color: white;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    box-shadow: 0 0 5px black;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+header img{
+    width: 6%;
+}
+header form{
+    background-color: cyan;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: 20px;
 }
 
+
+/*----------------------------
+    MAIN 
+-----------------------------*/
 .cards-container{
     width: 100%;
     display: flex;
@@ -21,14 +40,6 @@ main {
     width: calc(100% / 4 - 30px);
     margin: 0 15px;
     filter: drop-shadow(0 0 5px white);
-}
-
-/*----------------------------
-    FORM 
------------------------------*/
-form{
-    background-color: cyan;
-    border-radius: 10px;
 }
 
 /*----------------------------
