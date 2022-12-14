@@ -1,36 +1,37 @@
 <?php
     $hotels = [
         [
+            'img' => 'https://www.belvederericcione.com/images/content/990452_55272_2_C_1800_1014_0_458814346/belvedere2-bassa.jpg',
             'name' => 'Hotel Belvedere',
-            'description' => 'Hotel Belvedere Descrizione',
+            'description' => 'Hotel Belvedere Descrizione Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis delectus dolores ad rerum incidunt voluptatibus. Hic exercitationem quia dolor quidem, itaque ullam cum corrupti numquam consectetur optio magni aspernatur!',
             'parking' => true,
             'vote' => 4,
             'distance_to_center' => 10.4
         ],
         [
             'name' => 'Hotel Futuro',
-            'description' => 'Hotel Futuro Descrizione',
+            'description' => 'Hotel Futuro Descrizione Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis delectus dolores ad rerum incidunt voluptatibus. Hic exercitationem quia dolor quidem, itaque ullam cum corrupti numquam consectetur optio magni aspernatur!',
             'parking' => true,
             'vote' => 2,
             'distance_to_center' => 2
         ],
         [
             'name' => 'Hotel Rivamare',
-            'description' => 'Hotel Rivamare Descrizione',
+            'description' => 'Hotel Rivamare Descrizione Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis delectus dolores ad rerum incidunt voluptatibus. Hic exercitationem quia dolor quidem, itaque ullam cum corrupti numquam consectetur optio magni aspernatur!',
             'parking' => false,
             'vote' => 1,
             'distance_to_center' => 1
         ],
         [
             'name' => 'Hotel Bellavista',
-            'description' => 'Hotel Bellavista Descrizione',
+            'description' => 'Hotel Bellavista Descrizione Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis delectus dolores ad rerum incidunt voluptatibus. Hic exercitationem quia dolor quidem, itaque ullam cum corrupti numquam consectetur optio magni aspernatur!',
             'parking' => false,
             'vote' => 5,
             'distance_to_center' => 5.5
         ],
         [
             'name' => 'Hotel Milano',
-            'description' => 'Hotel Milano Descrizione',
+            'description' => 'Hotel Milano Descrizione Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis delectus dolores ad rerum incidunt voluptatibus. Hic exercitationem quia dolor quidem, itaque ullam cum corrupti numquam consectetur optio magni aspernatur!',
             'parking' => true,
             'vote' => 2,
             'distance_to_center' => 50
@@ -76,52 +77,51 @@
             <button type="submit"><i class="fa-solid fa-magnifying-glass-location"></i></button>
         </form>
 
-        <table class="table table-hover mt-5">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Descrizione</th>
-                    <th scope="col">Parcheggio</th>
-                    <th scope="col">Voto</th>
-                    <th scope="col">Distanza dal centro</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php for ($i=0; $i < count($hotels); $i++) { ?>
-                    <?php if($parking == 'no_filter' && $voting == 'all' 
-                    || $parking == 'no_filter' && $voting == 'one' && $hotels[$i]['vote'] >= 1
-                    || $parking == 'no_filter' && $voting == 'two' && $hotels[$i]['vote'] >= 2
-                    || $parking == 'no_filter' && $voting == 'three' && $hotels[$i]['vote'] >= 3
-                    || $parking == 'no_filter' && $voting == 'four' && $hotels[$i]['vote'] >= 4
-                    || $parking == 'no_filter' && $voting == 'five' && $hotels[$i]['vote'] >= 5
-                    || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'all'
-                    || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'one' && $hotels[$i]['vote'] >= 1
-                    || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'two' && $hotels[$i]['vote'] >= 2
-                    || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'three' && $hotels[$i]['vote'] >= 3
-                    || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'four' && $hotels[$i]['vote'] >= 4
-                    || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'five' && $hotels[$i]['vote'] >= 5
-                    ) { ?>
-                        <tr>
-                            <th scope="row"><?php echo $i + 1 ?></th>
-                            <td><?php echo $hotels[$i]['name'] ?></td>
-                            <td><?php echo $hotels[$i]['description'] ?></td>
-                            <td>
-                                <?php
-                                    if($hotels[$i]['parking']){
-                                        echo 'Si';
-                                    } else {
-                                        echo 'No';
-                                    }
-                                ?>
-                            </td>
-                            <td><?php echo $hotels[$i]['vote'] ?></td>
-                            <td><?php echo $hotels[$i]['distance_to_center'] ?> km</td>
-                        </tr>
-                    <?php } ?>
+        <div class="cards-container mt-5">
+            <?php for ($i=0; $i < count($hotels); $i++) { ?>
+                <?php if($parking == 'no_filter' && $voting == 'all' 
+                || $parking == 'no_filter' && $voting == 'one' && $hotels[$i]['vote'] >= 1
+                || $parking == 'no_filter' && $voting == 'two' && $hotels[$i]['vote'] >= 2
+                || $parking == 'no_filter' && $voting == 'three' && $hotels[$i]['vote'] >= 3
+                || $parking == 'no_filter' && $voting == 'four' && $hotels[$i]['vote'] >= 4
+                || $parking == 'no_filter' && $voting == 'five' && $hotels[$i]['vote'] >= 5
+                || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'all'
+                || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'one' && $hotels[$i]['vote'] >= 1
+                || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'two' && $hotels[$i]['vote'] >= 2
+                || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'three' && $hotels[$i]['vote'] >= 3
+                || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'four' && $hotels[$i]['vote'] >= 4
+                || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'five' && $hotels[$i]['vote'] >= 5
+                ) { ?>
+                <div class="card mb-5">
+                    <img class="card-img-top" src="https://www.belvederericcione.com/images/content/990452_55272_2_C_1800_1014_0_458814346/belvedere2-bassa.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $hotels[$i]['name'] ?></h5>
+                        <p class="card-text"><?php echo $hotels[$i]['description'] ?></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"> 
+                            <strong>Parcheggio: </strong>
+                            <?php
+                                if($hotels[$i]['parking']){
+                                    echo 'Si';
+                                } else {
+                                    echo 'No';
+                                }
+                            ?>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Voto: </strong>
+                            <?php echo $hotels[$i]['vote'] ?>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Distanza dal centro: </strong>
+                            <?php echo $hotels[$i]['distance_to_center'] ?> km
+                        </li>
+                    </ul>
+                </div>
                 <?php } ?>
-            </tbody>
-        </table>
+            <?php } ?>
+        </div>
     </main>
     
     <!-- Bootstrap CDN js -->
