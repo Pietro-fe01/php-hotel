@@ -1,6 +1,7 @@
 <?php
     $hotels = [
         [
+            'img' => 'belvedere-hotel.jpeg',
             'name' => 'Hotel Belvedere',
             'description' => 'Hotel Belvedere Descrizione Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis delectus dolores ad rerum incidunt voluptatibus. Hic exercitationem quia dolor quidem, itaque ullam cum corrupti numquam consectetur optio magni aspernatur!',
             'parking' => true,
@@ -8,13 +9,14 @@
             'distance_to_center' => 10.4
         ],
         [
+            'img' => 'futuro-hotel.jpg',
             'name' => 'Hotel Futuro',
             'description' => 'Hotel Futuro Descrizione Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis delectus dolores ad rerum incidunt voluptatibus. Hic exercitationem quia dolor quidem, itaque ullam cum corrupti numquam consectetur optio magni aspernatur!',
             'parking' => true,
             'vote' => 2,
             'distance_to_center' => 2
         ],
-        [
+        [   'img' => 'rivamare-hotel.jpeg',
             'name' => 'Hotel Rivamare',
             'description' => 'Hotel Rivamare Descrizione Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis delectus dolores ad rerum incidunt voluptatibus. Hic exercitationem quia dolor quidem, itaque ullam cum corrupti numquam consectetur optio magni aspernatur!',
             'parking' => false,
@@ -22,6 +24,7 @@
             'distance_to_center' => 1
         ],
         [
+            'img' => 'bellavista-hotel.jpeg',
             'name' => 'Hotel Bellavista',
             'description' => 'Hotel Bellavista Descrizione Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis delectus dolores ad rerum incidunt voluptatibus. Hic exercitationem quia dolor quidem, itaque ullam cum corrupti numquam consectetur optio magni aspernatur!',
             'parking' => false,
@@ -29,11 +32,36 @@
             'distance_to_center' => 5.5
         ],
         [
+            'img' => 'milano-hotel.jpg',
             'name' => 'Hotel Milano',
             'description' => 'Hotel Milano Descrizione Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis delectus dolores ad rerum incidunt voluptatibus. Hic exercitationem quia dolor quidem, itaque ullam cum corrupti numquam consectetur optio magni aspernatur!',
             'parking' => true,
             'vote' => 2,
             'distance_to_center' => 50
+        ],
+        [
+            'img' => 'palermo-hotel.jpg',
+            'name' => 'Hotel Palermo',
+            'description' => 'Hotel Palermo Descrizione Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis delectus dolores ad rerum incidunt voluptatibus. Hic exercitationem quia dolor quidem, itaque ullam cum corrupti numquam consectetur optio magni aspernatur!',
+            'parking' => true,
+            'vote' => 4,
+            'distance_to_center' => 7.3
+        ],
+        [
+            'img' => 'new-york-hotel.jpeg',
+            'name' => 'Hotel New York',
+            'description' => 'Hotel New York Descrizione Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis delectus dolores ad rerum incidunt voluptatibus. Hic exercitationem quia dolor quidem, itaque ullam cum corrupti numquam consectetur optio magni aspernatur!',
+            'parking' => false,
+            'vote' => 0,
+            'distance_to_center' => 18
+        ],
+        [
+            'img' => 'lucky-hotel.jpg',
+            'name' => 'Hotel Lucky',
+            'description' => 'Hotel Lucky Descrizione Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis delectus dolores ad rerum incidunt voluptatibus. Hic exercitationem quia dolor quidem, itaque ullam cum corrupti numquam consectetur optio magni aspernatur!',
+            'parking' => true,
+            'vote' => 3,
+            'distance_to_center' => 4
         ],
     ];
 
@@ -93,7 +121,9 @@
                 || $parking == 'on' && $hotel['parking'] === true && $voting == 'five' && $hotel['vote'] >= 5
                 ) { ?>
                 <div class="card mb-5">
-                    <img class="card-img-top" src="https://www.belvederericcione.com/images/content/990452_55272_2_C_1800_1014_0_458814346/belvedere2-bassa.jpg" alt="Card image cap">
+                    <?php 
+                        echo "<img class=\"card-img-top\" src=\"img/{$hotel["img"]}\">"
+                    ?>
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $hotel['name'] ?></h5>
                         <p class="card-text"><?php echo $hotel['description'] ?></p>

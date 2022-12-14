@@ -44,6 +44,11 @@ header form{
     filter: drop-shadow(0 0 5px white);
 }
 
+.cards-container .card img{
+    height: 170px;
+    object-fit: cover;
+}
+
 /*----------------------------
     BUTTON 
 -----------------------------*/
