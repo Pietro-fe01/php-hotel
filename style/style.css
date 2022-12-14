@@ -39,14 +39,19 @@ header form{
 }
 
 .cards-container .card{
-    width: calc(100% / 4 - 30px);
-    margin: 0 15px;
+    width: calc(100% / 4 - 28px);
+    margin: 0 14px;
     filter: drop-shadow(0 0 5px white);
+    transition: transform 0.3s;
 }
 
 .cards-container .card img{
     height: 170px;
     object-fit: cover;
+}
+
+.cards-container .card:hover{
+    transform: scale(1.1);
 }
 
 /*----------------------------
