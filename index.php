@@ -81,17 +81,17 @@
         <div class="cards-container mt-5">
             <?php foreach ($hotels as $hotel) { ?>
                 <?php if($parking == 'no_filter' && $voting == 'all' 
-                || $parking == 'no_filter' && $voting == 'one' && $hotels[$i]['vote'] >= 1
-                || $parking == 'no_filter' && $voting == 'two' && $hotels[$i]['vote'] >= 2
-                || $parking == 'no_filter' && $voting == 'three' && $hotels[$i]['vote'] >= 3
-                || $parking == 'no_filter' && $voting == 'four' && $hotels[$i]['vote'] >= 4
-                || $parking == 'no_filter' && $voting == 'five' && $hotels[$i]['vote'] >= 5
-                || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'all'
-                || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'one' && $hotels[$i]['vote'] >= 1
-                || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'two' && $hotels[$i]['vote'] >= 2
-                || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'three' && $hotels[$i]['vote'] >= 3
-                || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'four' && $hotels[$i]['vote'] >= 4
-                || $parking == 'on' && $hotels[$i]['parking'] === true && $voting == 'five' && $hotels[$i]['vote'] >= 5
+                || $parking == 'no_filter' && $voting == 'one' && $hotel['vote'] >= 1
+                || $parking == 'no_filter' && $voting == 'two' && $hotel['vote'] >= 2
+                || $parking == 'no_filter' && $voting == 'three' && $hotel['vote'] >= 3
+                || $parking == 'no_filter' && $voting == 'four' && $hotel['vote'] >= 4
+                || $parking == 'no_filter' && $voting == 'five' && $hotel['vote'] >= 5
+                || $parking == 'on' && $hotel['parking'] === true && $voting == 'all'
+                || $parking == 'on' && $hotel['parking'] === true && $voting == 'one' && $hotel['vote'] >= 1
+                || $parking == 'on' && $hotel['parking'] === true && $voting == 'two' && $hotel['vote'] >= 2
+                || $parking == 'on' && $hotel['parking'] === true && $voting == 'three' && $hotel['vote'] >= 3
+                || $parking == 'on' && $hotel['parking'] === true && $voting == 'four' && $hotel['vote'] >= 4
+                || $parking == 'on' && $hotel['parking'] === true && $voting == 'five' && $hotel['vote'] >= 5
                 ) { ?>
                 <div class="card mb-5">
                     <img class="card-img-top" src="https://www.belvederericcione.com/images/content/990452_55272_2_C_1800_1014_0_458814346/belvedere2-bassa.jpg" alt="Card image cap">
